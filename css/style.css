@@ -122,7 +122,7 @@ input, textarea, select, button{
     color: #C3C3C3;
 }
 .button-b1{
-    padding: 24px;
+    padding: 24px 32px;
     border-radius: 12px;
     font-size: 20px;
     line-height: 24px;
@@ -142,11 +142,19 @@ input, textarea, select, button{
 .button-icon{
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 17.5px 56px;
     border-radius: 12px;
     font-size: 16px;
     line-height: 19px;
+}
+.button-icon > span{
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
 }
 .button-white{
     color: var(--color-enabled);
@@ -220,7 +228,7 @@ input, textarea, select, button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 .st_header_nav{
     flex: 1;
@@ -237,8 +245,11 @@ input, textarea, select, button{
 .st_header_nav > ul > li > a{
     display: inline-block;
     color: #ffffff;
-    padding: 16.5px 22px;
+    padding: 10.5px 22px;
     font-size: 18px;
+}
+.st_header_button .button{
+    padding: 14px 24px;
 }
 /*---------------------------------------------------------------- 
 3. header end
@@ -313,9 +324,6 @@ input, textarea, select, button{
     width: 100%;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.st_scene_list .st_scene_item:hover .st_scene_image img{
-    transform: scale(1.1);
-}
 .st_scene_list .st_scene_item .st_scene_image .st_scene_overlay{
     position: absolute;
     top: 0;
@@ -329,7 +337,7 @@ input, textarea, select, button{
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .st_scene_list .st_scene_item:hover .st_scene_image .st_scene_overlay{
-    background-color: rgba(94, 66, 165, 0.60);
+    background-color: rgba(94, 66, 165, 0.80);
 }
 .st_scene_launch{
     display: inline-flex;
@@ -364,6 +372,9 @@ input, textarea, select, button{
 }
 .st_scene_item:hover .st_scene_launch > .st_scene_launch_icon svg{
     transform: rotate(0deg);
+}
+.st_scene_item:hover .st_scene_launch > .st_scene_launch_icon{
+    background-color: transparent;
 }
 
 .st_scene_details p{
@@ -433,17 +444,17 @@ input, textarea, select, button{
     width: 100%;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.st_news_item:hover > .st_news_image > img{
-    transform: scale(1.1);
-}
 .st_news_item .title-1{
     margin: 20px 0px 40px;
 }
-.st_news_item > p{
+.st_news_item > .st_news_content{
+    min-height: 124px;
+}
+.st_news_item > .st_news_content > p{
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     color: #6A6A6A;
-    font-size: 18px;
+    font-size: 16px;
 }
 .st_news_item .button{
     margin-top: 20px;
@@ -470,6 +481,10 @@ input, textarea, select, button{
 .st_connect_wrapper p{
     color: #D1D1DD;
     font-size: 20px;
+}
+.st_connect_wrapper .button.button-icon{
+    padding: 17.5px 16px;
+    min-width: 239px;
 }
 .st_connect_wrapper .st_connect_twitter{
     padding-right: 80px;
@@ -653,6 +668,10 @@ input, textarea, select, button{
     }
     .st_scene_launch > .st_scene_launch_icon{
         display: none;
+    }
+    .st_connect_wrapper .button.button-icon{
+        padding: 13.5px 16px;
+        min-width: 255px;
     }
 }
 /*---------------------------------------------------------------- 
